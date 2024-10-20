@@ -7,6 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <title>Aman</title>
 
 </head>
@@ -16,21 +18,25 @@
 
 <nav class="navbar">
     <div class="container">
-        <div>
+        <div class = "page">
             <a href="#top" class="nav-link">Home</a>
             <a href="#con" class="nav-link">Contact</a>
         </div>
+
         
         
         <div class="social-media">
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"> 
+                <i class="fab fa-instagram" style="font-size: 50px;"></i>
+                
             </a>
-            <a href="https://github.com/amandhakad4u" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/amandhakad4u" target="_blank" class="social-icon"> 
+                <i class="fab fa-github" style="font-size: 50px;"></i> 
+                
             </a>
-            <a href="https://www.linkedin.com/in/aman-dhakad-87b3571b3/" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/aman-dhakad-87b3571b3/" target="_blank" class="social-icon"> 
+                <i class="fab fa-linkedin" style="font-size: 50px;"></i>
+                
             </a>
         </div>
     </div>
@@ -48,7 +54,7 @@
         <div class="summary">
             <h1>Hello i'm Aman Dhakad</h1>
             <p>WI have a robust academic background in technology and management, reflecting a commitment to both theoretical knowledge and practical application. I am currently pursuing a Master of Science in Information Technology and Management at the Illinois Institute of Technology, where I am enhancing my skills in advanced technology and management principles. My foundational education in Computer Science and Engineering was completed at Rajiv Gandhi Proudyogiki Vishwavidyalaya in India, where I built a solid base in core computing concepts.</p></p>
-            <a href="/static/resume.pdf" class="resume-button">Download my Resume</a>
+            <a href="resume.pdf" class="resume-button">Download my Resume</a>
         </div>
 
     </div>
@@ -159,9 +165,8 @@
   <div class="certification-list">
       <div class="certification-item">
           <h3>Google Data Analyst Certificate</h3>
-          <p>Issued by Google, this certificate demonstrates proficiency in data analysis, including data cleaning, analysis, and visualization.</p>
           <a href="https://www.coursera.org/account/accomplishments/professional-cert/VWSYT874MRLT"> 
-              <img src="google_data_analytics.png" alt="google_data_analytics" style="width:50px; height:50px;">
+              <img src="google_data_analytics.png" alt="google_data_analytics" >
           </a> 
       </div>
       <!-- Add more certification items here as needed -->
@@ -199,6 +204,7 @@
 <section class="news-slider">
     <h2>News Updates</h2>
     <div class="slider-container">
+
         <div class="slider">
             <div class="news-tile">
                 <div class="news-image" style="background-image: url('path/to/image1.jpg');"></div>
@@ -247,6 +253,10 @@
             </div>
             <!-- Repeat tiles as needed -->
         </div>
+
+
+    </div>
+    <div class="navigation">
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
     </div>
@@ -333,42 +343,83 @@
 }
 
 .navbar .container {
-    /* display: flex; */
-    justify-content: right;
-    right: 0%;
+    display: flex;
+    justify-content: space-between; /* Ensure space between links and icons */
+    align-items: center; /* Vertically align items */
+    width: 100%;
+    position: relative;
+    padding: 0 20px; /* Add padding to the sides for spacing */
+}
+
+.page {
+    display: flex;
+    gap: 20px; 
+    position: relative;
+    left: 15px; 
+    margin-bottom: 20px;
 }
 
 .nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin-top: 50px;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px; /* Adjust margin to align properly with the navbar */
 }
 
 .nav-link:hover {
-    background-color: #555;
-    color: #fff;
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 2px 8px #ffffff80;
 }
 
+.nav-link:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+}
 
 .social-media {
-    display: flex; 
-    gap: 15px;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end; /* Push social media icons to the right */
+    position: relative;
+    right: 60px;
+    margin-bottom: 20px;
 }
 
-.social-icon {
-    color: white; 
-    font-size: 24px; 
+.social-media i {
+    color: #007bff; 
     text-decoration: none;
-    transition: transform 0.3s ease; 
+    transition: transform 1s ease;
+    font-size: 25px; /* Adjust icon size */
 }
 
 .social-icon:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2); /* Enlarge on hover */
 }
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    .page {
+        justify-content: center; /* Center the page links */
+        margin-bottom: 10px; /* Space between the links and the icons */
+    }
+
+    .social-media {
+        justify-content: center; /* Center social icons */
+    }
+}
+
 
 
 
@@ -396,7 +447,7 @@
     overflow: hidden; /* Ensure content doesn't overflow */
     border-radius: 50%; /* Make it circular */
     box-shadow: 0 2px 12px rgba(194, 193, 193, 0.5);
-    transition: transform 0.3s ease; /* Add transition for hover effects */
+    transition: width 1s ease, height 1s ease, transform 1s ease;
     z-index: 10;
 }
   .photo img {
@@ -404,6 +455,14 @@
       /* border-radius: 8px 0 0 10px; */
   
   }
+
+  .photo.scrolled {
+    width: 73px; 
+    height: 73px; /* Change height as needed for the scrolled state */
+
+    z-index: 10;
+}
+
   .summary {
       margin-top: 220px;
       margin-left: 20px;
@@ -623,6 +682,7 @@
 }
 
 .certification-list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust size as needed */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -631,7 +691,7 @@
 .certification-item {
     background: #333;
     padding: 15px;
-    border-radius: 8px;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -640,8 +700,8 @@
     color: #e0e0e0;
 }
 
-.certification-item p {
-    color: #ccc;
+.certification-item img {
+    width:70px; height:50px;
 }
 
 
@@ -687,14 +747,14 @@
   .news-slider {
     background-color: #1f1e1e;
       color: #fff;
-      padding: 40px 20px;
+
       position: relative;
   }
   
   .news-slider h2 {
-      margin-top: 0;
       font-size: 2rem;
       color: #007bff;
+      margin-top: 5px;
       text-align: center;
   }
   
@@ -703,15 +763,20 @@
       overflow: hidden;
   }
   
+
+
   .slider {
       display: flex;
       transition: transform 0.5s ease-in-out;
+      margin: 5px;
   }
   
   .news-tile {
-      min-width: 25%; /* Show 4 tiles at a time */
+      min-width: 30%; /* Show 4 tiles at a time */
       box-sizing: border-box;
       padding: 10px;
+      background-color: #007bff;
+      margin: 5px;
   }
   
   .news-image {
@@ -729,7 +794,6 @@
   }
   
   .news-tile h3 {
-      margin-top: 0;
       font-size: 1.5rem;
   }
   
@@ -754,14 +818,22 @@
       text-decoration: underline;
   }
   
+
+  .navigation{
+    height: 40px;
+    display: flex;
+    padding-top: 50x;
+    margin-top: 40px;
+}
   .prev, .next {
       position: absolute;
-      top: 50%;
+
       width: 40px;
       height: 40px;
       background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
       border: none;
+      border-radius: 50%;
       cursor: pointer;
       font-size: 24px;
       display: flex;
@@ -802,6 +874,7 @@
       color: #fff;
       padding: 40px 20px;
       position: relative;
+      margin-top: 20px;
 }
 
 .contact h1 {
@@ -812,14 +885,14 @@
 }
 
 .contact-container {
-    display:grid;
+    display:flex;
     margin: 0px; /* Center the container */
     background-color: #1f1e1e; 
-    width: 1500px;
+
 }
 
 .contact-form {
-    margin: 20px auto; /* Center the form with automatic side margins */
+    /* Center the form with automatic side margins */
     padding: 20px; /* Increase padding for a more spacious look */
     background-color: #000000; /* White background for the form */
     border-radius: 8px; /* Rounded corners */
@@ -830,7 +903,6 @@
 
 .contact-form h2 {
     font-size: 2em; /* Size of form heading */
-    margin-bottom: 15px; /* Space below */
     color: #686666; /* Text color */
 }
 
@@ -869,16 +941,18 @@
     flex: 1; /* Allow the info section to take available space */
     margin: 20px; /* Margin for spacing */
     padding: 20px; /* Padding for inner spacing */
-    background-color: #ffffff; /* White background for info */
+    margin-top: 300px;
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    right: auto;
     
 }
 
 .contact-item {
     display: flex; /* Flex layout for icon and text */
     align-items: center; /* Center align items */
-    margin-bottom: 15px; /* Space between items */
+    width: 300px;
+
 }
 
 .contact-item i {
@@ -889,7 +963,7 @@
 
 .contact-item a {
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Link color */
+    color: #007bff; /* Link color */
 }
 
 
@@ -908,8 +982,19 @@
 <script>
 
 
+const photoElement = document.querySelector('.photo');
 
+// Function to handle scroll event
+function handleScroll() {
+    if (window.scrollY > 50) { // Change the threshold as needed
+        photoElement.classList.add('scrolled'); // Add the class to shrink the photo
+    } else {
+        photoElement.classList.remove('scrolled'); // Remove the class to restore original size
+    }
+}
 
+// Attach the scroll event listener
+window.addEventListener('scroll', handleScroll);
 
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.slider');
@@ -983,6 +1068,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.location.href = mailtoLink; // Redirect to mailto link
     });
+
+
+
+
+
 </script>
 
 
