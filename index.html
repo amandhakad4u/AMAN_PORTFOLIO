@@ -7,7 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="fav.png" type="image/png">
 
     <title>Aman</title>
@@ -16,51 +18,62 @@
 
 <body>
 
+    
+<div class="resume"> 
+    <a href="resume.pdf" class="resume-button">Resume</a>
+</div>
 
 <nav class="navbar">
-    <div class="container">
-        <div class = "page">
-            <a href="#top" class="nav-link">Home</a>
-            <a href="#con" class="nav-link">Contact</a>
-        </div>
+    
 
-        
-        
-        <div class="social-media">
+    <div class="container">
+
+        <div class = "page">
+            <a href="#top" class="nav-link">About</a>
+            <a href="#top" class="nav-link">Projects</a>
+            <a href="#con" class="nav-link">Certificate</a>
+            <a href="#con" class="nav-link">Contact</a>
             <a href="https://www.instagram.com" target="_blank" class="social-icon"> 
-                <i class="fab fa-instagram" style="font-size: 50px;"></i>
+                <i class="fab fa-instagram" ></i>
                 
             </a>
             <a href="https://github.com/amandhakad4u" target="_blank" class="social-icon"> 
-                <i class="fab fa-github" style="font-size: 50px;"></i> 
+                <i class="fab fa-github" ></i> 
                 
             </a>
             <a href="https://www.linkedin.com/in/aman-dhakad-87b3571b3/" target="_blank" class="social-icon"> 
-                <i class="fab fa-linkedin" style="font-size: 50px;"></i>
+                <i class="fab fa-linkedin"></i>
                 
             </a>
         </div>
+
     </div>
 </nav>
 
 
+
+
+
+
+
+
 <div class="intro" id="top">
-   
+    <video autoplay muted loop id="background-video">
+        <source src="bacintro.MOV" type="video/mp4" />Your browser does not support the video tag.
+      </video>
+
+
     <div class="intro-container">
-       
-        <div class="photo"> 
-            <img src="aman.jpg" alt="aman'photo" />
-        </div>
-
-        <div class="summary">
-            <h1>Hello i'm Aman Dhakad</h1>
-            <p>WI have a robust academic background in technology and management, reflecting a commitment to both theoretical knowledge and practical application. I am currently pursuing a Master of Science in Information Technology and Management at the Illinois Institute of Technology, where I am enhancing my skills in advanced technology and management principles. My foundational education in Computer Science and Engineering was completed at Rajiv Gandhi Proudyogiki Vishwavidyalaya in India, where I built a solid base in core computing concepts.</p></p>
-            <a href="resume.pdf" class="resume-button">Download my Resume</a>
-        </div>
-
+        <h1 class="big-heading">Hello I'm<br>Aman Dhakad</h1>
     </div>
-    
+    <div class="summary">
+        <p>WI have a robust academic background in technology and management, reflecting a commitment to both theoretical knowledge and practical application. I am currently pursuing a Master of Science in Information Technology and Management at the Illinois Institute of Technology, where I am enhancing my skills in advanced technology and management principles. My foundational education in Computer Science and Engineering was completed at Rajiv Gandhi Proudyogiki Vishwavidyalaya in India, where I built a solid base in core computing concepts.</p></p>
+    </div>
 </div> 
+
+
+
+
 
 <section class="products">
     <h2>Projects</h2>
@@ -73,7 +86,6 @@
               </video>
             <div class="tile-content">
                 <h3>ecommerce website (Zallany.com)</h3>
-                <p>     </p>
                 <a href="https://github.com/amandhakad4u/E-commerce.git" class="buy-button">see code</a>
             </div>
         </div>
@@ -121,52 +133,43 @@
     </div>
 </section>
 
-<section class="work-experience">
-    <h2>Work Experience</h2>
-    <div class="work-experience-container">
 
-        <div class="year-buttons">
-            <button class="year-button" onclick="showExperience('pep', this)">Jul 2021 – Dec 2021</button>
-            <button class="year-button" onclick="showExperience('hiecor', this)">Feb 2022 – Nov 2022</button>
-            
-        </div>
-
-        <div class="experience-list">
-
-            <div class="experience-item" id="pep">
-                <h2>Pep Coding Education    -<strong>Role:</strong> Student Intern</h2>
-                <ul>
-                    <li>Optimized data organization for faster query times and reduced database access latency by 25%.</li>
-                    <li>Performed data extraction using ETL processes and SQL scripts, improving data accuracy by 15%.</li>
-                    <li>Reduced data processing time by 20% through improved efficiency in data handling.</li>
-                    <li>Worked on data-related projects for a website serving over 1,000 students through online courses and live classes.</li>
-                    <li>Collaborated with the development team to ensure smooth data flow between systems.</li>
-                </ul>
+    <section class="work-experience-section">
+        <h3 class="section-heading">Work Experience</h3>
+        <div class="work-container">
+            <div class="experience">
+                <button class="toggle-button">Experience 1</button>
+                <div class="details">
+                    <p>Details about Experience 1. This could include information about your role, responsibilities, and achievements.</p>
+                </div>
             </div>
-                        <div class="experience-item" id="hiecor">
-                <h2>HieCOR Software Technologies      -<strong>Role:</strong> Software Engineer</h2>
-                <ul>
-                    <li>Worked on various front-end, back-end, and database tasks, contributing to multiple projects.</li>
-                    <li>Collaborated with a team of developers to design and implement scalable software solutions.</li>
-                    <li>Developed and maintained full-stack applications using React, Django, and Node.js.</li>
-                    <li>Enhanced overall software performance and optimized processes for better efficiency.</li>
-                    <li>Learned to work in fast-paced environments, effectively communicating with stakeholders to meet project goals.</li>
-                </ul>
+            <div class="experience">
+                <button class="toggle-button">Experience 2</button>
+                <div class="details">
+                    <p>Details about Experience 2. Here, you might outline key projects you worked on or skills you developed.</p>
+                </div>
             </div>
-
+            <div class="experience">
+                <button class="toggle-button">Experience 3</button>
+                <div class="details">
+                    <p>Details about Experience 3. This section can highlight what you learned and how you contributed to the team.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-</section>
+
+
+
 
 <section class="certifications">
   <h2>Certifications</h2>
   <div class="certification-list">
       <div class="certification-item">
-          <h3>Google Data Analyst Certificate</h3>
           <a href="https://www.coursera.org/account/accomplishments/professional-cert/VWSYT874MRLT"> 
               <img src="google_data_analytics.png" alt="google_data_analytics" >
           </a> 
+          <h3>Google Data Analyst Certificate</h3>
       </div>
       <!-- Add more certification items here as needed -->
   </div>
@@ -307,774 +310,7 @@
 </section>
 
 
+<script src="script.js"></script>
+
 </body>
-
-
-
-
-<style>
-    html {
-    scroll-behavior: smooth;
-}
-
-    body {
-    cursor: url("/static/cursor.png"), auto;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #000;
-    color: #fff;
-}
-
-
-
-
-
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 45px;
-    background: linear-gradient(90deg, #1a1a1a, #333);
-    padding: 1rem 0;
-    z-index: 9;
-    box-shadow: 0 2px 8px rgba(194, 193, 193, 0.5);
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between; /* Ensure space between links and icons */
-    align-items: center; /* Vertically align items */
-    width: 100%;
-    position: relative;
-    padding: 0 20px; /* Add padding to the sides for spacing */
-}
-
-.page {
-    display: flex;
-    gap: 20px; 
-    position: relative;
-    left: 15px; 
-    margin-bottom: 20px;
-}
-
-.nav-link {
-    background-color: #007bff;
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none; 
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 10px; /* Adjust margin to align properly with the navbar */
-}
-
-.nav-link:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    box-shadow: 0 2px 8px #ffffff80;
-}
-
-.nav-link:active {
-    transform: scale(0.98); /* Slightly shrink on click */
-}
-
-.social-media {
-    display: flex;
-    gap: 40px;
-    justify-content: flex-end; /* Push social media icons to the right */
-    position: relative;
-    right: 60px;
-    margin-bottom: 20px;
-}
-
-.social-media i {
-    color: #007bff; 
-    text-decoration: none;
-    transition: transform 1s ease;
-    font-size: 25px; /* Adjust icon size */
-}
-
-.social-icon:hover {
-    transform: scale(1.2); /* Enlarge on hover */
-}
-
-/* Media query for mobile responsiveness */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center;
-    }
-
-    .page {
-        justify-content: center; /* Center the page links */
-        margin-bottom: 10px; /* Space between the links and the icons */
-    }
-
-    .social-media {
-        justify-content: center; /* Center social icons */
-    }
-}
-
-
-
-
-
-  
-  .intro {
-      padding: 20px;
-      margin-top: 50px;
-      background:transparent;
-  
-  } 
-  .intro-container {
-      justify-content: center;
-      height: 400px;
-  }
-
-  .photo {
-    margin-top: 1px; /* Center the element horizontally */
-    width: 120px; /* Set a fixed width */
-    height: 120px; /* Set a fixed height (equal to width for a circle) */
-    position: fixed; /* Fix the position relative to the viewport */
-    top: 2px; /* Distance from the top of the viewport */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for the element's width to truly center it */
-    overflow: hidden; /* Ensure content doesn't overflow */
-    border-radius: 50%; /* Make it circular */
-    box-shadow: 0 2px 12px rgba(194, 193, 193, 0.5);
-    transition: width 1s ease, height 1s ease, transform 1s ease;
-    z-index: 10;
-}
-  .photo img {
-      max-width: 100%;
-      /* border-radius: 8px 0 0 10px; */
-  
-  }
-
-  .photo.scrolled {
-    width: 73px; 
-    height: 73px; /* Change height as needed for the scrolled state */
-
-    z-index: 10;
-}
-
-  .summary {
-      margin-top: 220px;
-      margin-left: 20px;
-      margin-right: 20px; 
-      width: 100%;
-      position:relative;
-      overflow:scroll;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-  }
-  .summary h1, p {
-      margin-top: 0;
-      margin: 0;          /* Remove default margins */
-    width: 100%;       /* Full width */
-    text-align: center; /* Center align text */
-    padding: 10px;     /* Optional: Add padding for spacing */
-    box-sizing: border-box; 
-  }
-  .resume-button {
-      background-color: #007bff; /* Primary blue color */
-      color: #fff; /* White text */
-      border: none;
-      margin-top: 50px;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none; /* Remove underline */
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .resume-button:hover {
-      background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  .resume-button:active {
-      transform: scale(0.98); /* Slightly shrink on click */
-  }
-  
-  
-  
-  
-  
-  
-  
-  .products {
-      text-align: center;
-      padding: 20px;
-      margin-top: 90px;
-      background-color: #1f1e1e; 
-  
-      
-  }
-  .products h2 {
-      color: #007bff;
-  }
-  
-  .tiles-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust size as needed */
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
-  }
-  
-  .tile {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-  }
-  
-  .tile img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-  
-  .tile-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 10px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      
-  }
-  
-  .tile:hover {
-      transform: scale(1.05);
-  }
-  
-  .tile:hover .tile-content {
-      opacity: 1;
-  }
-  
-  .buy-button {
-      display: inline-block;
-      background-color: #007bff;
-      color: #fff;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-  }
-  
-  .buy-button:hover {
-      background-color: #0056b3;
-  }
-  
-
-
-
-
-
-
-  
-  .work-experience {
-      text-align: center;
-      padding: 20px;
-      margin-top: 90px;
-      background-color: #1f1e1e;
-  }
-  
-  .work-experience h2 {
-    color: #007bff;
-  }
-
-  
-  .year-buttons {
-    display: flex; /* Use flexbox to layout children in a row */
-    justify-content: center; /* Center the buttons horizontally (optional) */
-    gap: 10px;
-  }
-  
-  .year-button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s;
-      text-align: center; /* Center text inside buttons */
-  }
-  
-  .year-button.active {
-      background-color: #0056b3;
-  }
-  
-  .year-button:hover {
-      background-color: #0056b3;
-  }
-  
-  .experience-list {
-      margin-right: 200px; /* Add space to the right for the buttons */
-      position: relative;
-      width: 100%;
-      /* height: 500px; */
-      overflow: hidden;
-  }
-  
-  .experience-item {
-      display: none; /* Hide by default, will be shown when button is clicked */
-      background: transparent;
-      padding: 15px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-  }
-  
-  .experience-item h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      background: transparent;
-  }
-  
-  .experience-item p {
-      margin: 5px 0;
-      background: transparent;
-  }
-
-  #background-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* This will ensure the video covers the entire container */
-    }
-  
-  
-
-
-
-
-
-  .certifications {
-    text-align: center;
-      padding: 20px;
-      margin-top: 90px;
-      background-color: transparent; 
-}
-
-.certifications h2 {
-    color: #007bff;
-}
-
-.certification-list {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust size as needed */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.certification-item {
-    background: transparent;
-    padding: 15px;
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.certification-item h3 {
-    margin-top: 0;
-    color: #e0e0e0;
-}
-
-.certification-item img {
-    width:70px; height:50px;
-}
-
-
-
-  
-  
-   
-  
-.skills {
-      text-align: center;
-      padding: 20px;
-      margin: 20px;
-      background-color: transparent; 
-  }
-  
-  .skills h2 {
-      color: #007bff;
-  }
-  
-  .skills .tiles-container {
-    display: flex;
-      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust size as needed */
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
-  }
-  
-  .skills .tile {
-      background-color: #1f1e1e;
-      padding: 20px;
-      text-align: center;
-      border-radius: 30px;
-      box-shadow: 0 2px px rgba(0, 0, 0, 0.1);
-  } 
-  
-
-
-
-
-  
-  
-
-  .news-slider {
-    background-color: #1f1e1e;
-      color: #fff;
-
-      position: relative;
-  }
-  
-  .news-slider h2 {
-      font-size: 2rem;
-      color: #007bff;
-      margin-top: 5px;
-      text-align: center;
-  }
-  
-  .slider-container {
-      position: relative;
-      overflow: hidden;
-  }
-  
-
-
-  .slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      margin: 5px;
-  }
-  
-  .news-tile {
-      min-width: 30%; /* Show 4 tiles at a time */
-      box-sizing: border-box;
-      padding: 10px;
-      background-color: #007bff;
-      margin: 5px;
-  }
-  
-  .news-image {
-      height: 150px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 8px;
-  }
-  
-  .news-content {
-      background-color: #333;
-      border-radius: 8px;
-      padding: 10px;
-      color: #fff;
-  }
-  
-  .news-tile h3 {
-      font-size: 1.5rem;
-  }
-  
-  .news-tile .date {
-      color: #ccc;
-      font-size: 0.9rem;
-      margin: 10px 0;
-  }
-  
-  .news-tile .description {
-      font-size: 1rem;
-      margin: 10px 0;
-  }
-  
-  .news-tile .read-more {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-  }
-  
-  .news-tile .read-more:hover {
-      text-decoration: underline;
-  }
-  
-
-  .navigation{
-    height: 40px;
-    display: flex;
-    padding-top: 50x;
-    margin-top: 40px;
-}
-  .prev, .next {
-      position: absolute;
-
-      width: 40px;
-      height: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transform: translateY(-50%);
-  }
-  
-  .prev {
-      left: 10px;
-  }
-  
-  .next {
-      right: 10px;
-  }
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-   
-
-.contact {
-    background-color: #1f1e1e; 
-      color: #fff;
-      padding: 40px 20px;
-      position: relative;
-      margin-top: 20px;
-}
-
-.contact h1 {
-    margin-top: 0;
-      font-size: 2rem;
-      color: #007bff;
-      text-align: center;
-}
-
-.contact-container {
-    display:flex;
-    margin: 0px; /* Center the container */
-    background-color: #1f1e1e; 
-
-}
-
-.contact-form {
-    /* Center the form with automatic side margins */
-    padding: 20px; /* Increase padding for a more spacious look */
-    background-color: #000000; /* White background for the form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    width: 80%; /* Set form width to 80% of the screen */
-    max-width: 1200px; /* Limit the maximum width on larger screens */
-}
-
-.contact-form h2 {
-    font-size: 2em; /* Size of form heading */
-    color: #686666; /* Text color */
-}
-
-.contact-form label {
-    display: block; /* Block display for labels */
-    margin: 10px 0 5px; /* Space around labels */
-    font-weight: bold; /* Bold labels */
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 90%; /* Full width */
-    margin-right: 10px;
-    padding: 10px; /* Inner padding */
-    margin-bottom: 20px; /* Space below inputs */
-    border: 1px solid #807979; /* Border for inputs */
-    border-radius: 4px; /* Rounded corners */
-}
-
-.contact-form button {
-    background-color: #007bff; /* Primary button color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding for button */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Transition for hover effect */
-}
-
-.contact-form button:hover {
-    background-color: #0056b3; /* Darker color on hover */
-}
-
-
-.contact-info {
-    flex: 1; /* Allow the info section to take available space */
-    margin: 20px; /* Margin for spacing */
-    padding: 20px; /* Padding for inner spacing */
-    margin-top: 300px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    right: auto;
-    
-}
-
-.contact-item {
-    display: flex; /* Flex layout for icon and text */
-    align-items: center; /* Center align items */
-    width: 300px;
-
-}
-
-.contact-item i {
-    font-size: 1.5em; /* Size of icons */
-    margin-right: 10px; /* Space between icon and text */
-    color: #007bff; /* Icon color */
-}
-
-.contact-item a {
-    text-decoration: none; /* Remove underline from links */
-    color: #007bff; /* Link color */
-}
-
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column; /* Stack items on smaller screens */
-        align-items: center; /* Center align items */
-    }
-}
-
-</style>
-
-
-<script>
-
-
-const photoElement = document.querySelector('.photo');
-
-// Function to handle scroll event
-function handleScroll() {
-    if (window.scrollY > 50) { // Change the threshold as needed
-        photoElement.classList.add('scrolled'); // Add the class to shrink the photo
-    } else {
-        photoElement.classList.remove('scrolled'); // Remove the class to restore original size
-    }
-}
-
-// Attach the scroll event listener
-window.addEventListener('scroll', handleScroll);
-
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider');
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    const tileWidth = document.querySelector('.news-tile').offsetWidth;
-    let index = 0;
-
-    function updateSlider() {
-        slider.style.transform = `translateX(-${index * tileWidth}px)`;
-    }
-
-    nextButton.addEventListener('click', () => {
-        if (index < slider.children.length - 4) {
-            index++;
-            updateSlider();
-        }
-    });
-
-    prevButton.addEventListener('click', () => {
-        if (index > 0) {
-            index--;
-            updateSlider();
-        }
-    });
-
-    // Optionally, adjust slider on window resize
-    window.addEventListener('resize', () => {
-        updateSlider();
-    });
-});
-
-
-
-function showExperience(companyId, button) {
-    // Hide all experience items
-    const items = document.querySelectorAll('.experience-item');
-    items.forEach(item => item.style.display = 'none');
-
-    // Show the selected experience item
-    document.getElementById(companyId).style.display = 'block';
-
-    // Remove 'active' class from all buttons
-    const buttons = document.querySelectorAll('.year-button');
-    buttons.forEach(btn => btn.classList.remove('active'));
-
-    // Add 'active' class to the clicked button
-    button.classList.add('active');
-}
-
-// Show the first experience by default
-document.addEventListener('DOMContentLoaded', () => {
-    const firstButton = document.querySelector('.year-button');
-    if (firstButton) {
-        firstButton.click();
-    }
-});
-
-
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
-
-        const name = encodeURIComponent(document.getElementById('name').value);
-        const email = encodeURIComponent(document.getElementById('email').value);
-        const subject = encodeURIComponent(document.getElementById('subject').value);
-        const cc = encodeURIComponent(document.getElementById('cc').value);
-        const message = encodeURIComponent(document.getElementById('message').value);
-
-        const mailtoLink = `mailto:adhakad@hawk.iit.edu?subject=${subject}&cc=${cc}&body=Name: ${name}%0AEmail: ${email}%0AMessage:%0A${message}`;
-
-        window.location.href = mailtoLink; // Redirect to mailto link
-    });
-
-
-
-
-
-</script>
-
-
-
-
 </html>
