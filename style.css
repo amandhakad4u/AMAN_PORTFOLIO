@@ -1,0 +1,752 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    cursor: url("/static/cursor.png"), auto;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #000000;
+
+
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+.resume {
+    width: 100px;                              /* Set the width to 660px */
+    height: 20px;                              /* Set the height */
+    padding: 15px;                             /* Padding inside the navbar */
+    border-color: white;                       /* Border color */
+    background-color: rgba(255, 255, 255, 0.411);     /* Semi-transparent black background */
+    backdrop-filter: blur(15px);               /* Apply blur effect */
+    z-index: 10;                               /* Ensure it appears above other elements */
+    border-radius: 20px;                       /* Round corners */
+    position: fixed;                           /* Keep the navbar fixed */
+    top: 10px;                                 /* Distance from the top of the page */
+    right: 50px; 
+    opacity: 0;                                   /* Center the navbar horizontally */
+    transform: translateX(-50%);              /* Adjust for centering */
+    animation: fadeIntitle 1s ease forwards;       /* Apply fadeIn animation */
+    animation-delay: 1s;
+}
+
+@keyframes fadeIntitle {
+    0% {
+        opacity: 0;               /* Start with an opacity of 0 */
+        transform: translateX(-20px); /* Move the navbar up slightly */
+    }
+    100% {
+        opacity: 1;               /* End with full opacity */
+        transform: translateX(0); /* Move back to its original position */
+    }
+}
+.resume-button {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+.resume-button:hover{
+    color: #ffffff; 
+    transform: scale(1.1);
+
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+.navbar {
+    width: 660px;                              /* Set the width to 660px */
+    height: 20px;                              /* Set the height */
+    padding: 15px;                             /* Padding inside the navbar */
+    border-color: white;                       /* Border color */
+    background-color: rgba(255, 255, 255, 0.411);     /* Semi-transparent black background */
+    backdrop-filter: blur(15px);               /* Apply blur effect */
+    z-index: 10;                               /* Ensure it appears above other elements */
+    border-radius: 20px;                       /* Round corners */
+    position: fixed;                           /* Keep the navbar fixed */
+    top: 10px;                                 /* Distance from the top of the page */
+    right: 30%; 
+    opacity: 0;                                   /* Center the navbar horizontally */
+    transform: translateX(-50%);              /* Adjust for centering */
+    animation: fadeIn 1s ease forwards;       /* Apply fadeIn animation */
+    animation-delay: 1s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;               /* Start with an opacity of 0 */
+        transform: translateY(-20px); /* Move the navbar up slightly */
+    }
+    100% {
+        opacity: 1;               /* End with full opacity */
+        transform: translateY(0); /* Move back to its original position */
+    }
+}
+
+.container {
+    display: flex;                 /* Use flexbox for layout */
+    justify-content: center; /* Space out elements */
+    align-items: center;       
+    color: #d2d2d2;
+}
+
+.page {
+    display: flex;
+    gap: 30px;
+    position:fixed;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 20px;
+    font-size: 15px;
+ 
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.social-icon {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-link:hover, .social-icon:hover {
+    color: #ffffff; 
+    transform: scale(1.1);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+.intro {
+    width: 100%;                            /* Full width of the section */
+    height: 100vh;                          /* Full viewport height */
+    background-size: cover;                  /* Cover the entire section */
+    background-position: center;             /* Center the background image */
+    opacity: 0;                              /* Start with opacity 0 */
+    animation: fadeInIntro 1s ease-in-out forwards; /* Apply fadeInIntro animation */
+    animation-delay: 2s;                     /* Delay the animation by 2 seconds */
+}
+.intro video {
+    width: 100%;                            /* Full width of the section */
+    height: 100vh;                          /* Full viewport height */
+    background-size: cover;                  /* Cover the entire section */
+    background-position: center;             /* Center the background image */
+    opacity: 0;                              /* Start with opacity 0 */
+    animation: fadeInIntro 1s ease-in-out forwards; /* Apply fadeInIntro animation */
+    animation-delay: 2s;                     /* Delay the animation by 2 seconds */
+}
+
+@keyframes fadeInIntro {
+    0% {
+        opacity: 0;                           /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1;                           /* End with full opacity */
+    }
+}
+
+.intro-container {
+    margin-top: 0%;
+    color: #ffffff;                          /* White text color for better visibility */
+    padding: 20px;                           /* Optional padding */
+
+}
+
+.big-heading {
+    font-size: 8em;                        /* Size of the heading */
+    color: #cccbcb;                        /* White text color */
+    width: 900px;
+    margin-top: 200px;
+    margin-left: 30px;
+    opacity: 0;
+    animation: fadeInSlideUp 1.5s ease-in-out forwards; /* Apply animation */
+    animation-delay: 3s;                 /* Delay before the animation starts */
+    transition: all 1s ease;
+}
+
+.big-heading:hover {
+    text-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;                          /* Start invisible */
+        transform: translateY(60px);        /* Start 20px lower */
+    }
+    100% {
+        opacity: 1;                          /* Fully visible */
+        transform: translateY(0px);            /* Move to original position */
+        
+    }
+}
+
+
+.summary p {
+    color: #cccbcb;                        /* White text color */
+    width: 900px;
+    opacity: 0;
+    margin-left: 50px;
+    animation: fadeInSlideUp 1.5s ease forwards; /* Apply animation */
+    animation-delay: 3.5s;                 /* Delay before the animation starts */
+}
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;                          /* Start invisible */
+        transform: translateY(60px);        /* Start 20px lower */
+    }
+    100% {
+        opacity: 1;                          /* Fully visible */
+        transform: translateY(0px);            /* Move to original position */
+        
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+.products {
+    text-align: center;
+    padding: 20px;
+    margin-top: 25px;
+    background-color: #000000f6;
+}
+
+.products h2 {
+    color: #ffffff;
+    font-size: 45px;
+    margin-top: 5px;
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 50px;
+    justify-content: center;
+}
+
+.tile {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /* border-radius: 8px; */
+    transition: transform 0.3s ease;
+    border: 0.5px solid #ccc ;
+
+
+
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    /* This will ensure the video covers the entire container */
+}
+
+.tile-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.813);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.tile-content h3,.tile-content a  {
+    margin-top: 100px;
+}
+
+.tile:hover #background-video {
+    transform: scale(1.8);
+}
+
+
+.tile:hover .tile-content {
+    opacity: 1;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    bottom: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 19px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.buy-button:hover {
+    background-color: #2286f1;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+.work-experience-section {
+    padding: 20px;
+    margin-top: 150px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    
+
+}
+
+.section-heading {
+    width: 700px;
+    color: #000000;
+    font-size: 45px;
+    height:min-content;
+}
+
+.work-container {
+
+    width: 100%; /* Full width for smaller screens */
+    background-color: rgb(255, 255, 255); /* Container background color */
+    padding: 20px; /* Padding around the content */
+    border-radius: 20px; /* Rounded corners */
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  */
+    height: min-content;
+}
+
+
+.experience {
+    margin-bottom: 2px;
+}
+
+.toggle-button {
+    background-color: #ece9e9db;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #f3f2f2;
+}
+
+.details {
+    max-height: 0; /* Prevents box from taking up space */
+    opacity: 0; /* Hidden by default */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-out; /* Added ease-out for both properties */
+    background-color: #ffffff;
+
+}
+
+.details.show {
+    max-height: 100px; /* Set a maximum height */
+    opacity: 1; /* Make it visible */
+    padding: 10px; /* Padding when visible */
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+.certifications {
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 90px;
+    background-color:#1f1e1e;
+}
+
+.certifications h2 {
+
+    color: #ffffff;
+    font-size: 45px;
+
+}
+
+.certification-list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* Adjust size as needed */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.certification-item {
+    background: transparent;
+    padding: 15px;
+}
+
+.certification-item h3 {
+    margin-top: ;
+    color: #e0e0e0;
+}
+
+.certification-item img {
+    width: 70px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+.skills {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: transparent;
+}
+
+.skills h2 {
+    color: #007bff;
+}
+
+.skills .tiles-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    /* Adjust size as needed */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.skills .tile {
+    background-color: #1f1e1e;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 2px px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+.news-slider {
+    background-color: #1f1e1e;
+    color: #fff;
+
+    position: relative;
+}
+
+.news-slider h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin: 5px;
+}
+
+.news-tile {
+    min-width: 30%;
+    /* Show 4 tiles at a time */
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #007bff;
+    margin: 5px;
+}
+
+.news-image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.news-content {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+}
+
+.news-tile h3 {
+    font-size: 1.5rem;
+}
+
+.news-tile .date {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.news-tile .description {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.news-tile .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-tile .read-more:hover {
+    text-decoration: underline;
+}
+
+
+.navigation {
+    height: 40px;
+    display: flex;
+    padding-top: 50x;
+    margin-top: 40px;
+}
+
+.prev,
+.next {
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+    background-color: #1f1e1e;
+    color: #fff;
+    padding: 40px 20px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.contact h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #007bff;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    margin: 0px;
+    /* Center the container */
+    background-color: #1f1e1e;
+
+}
+
+.contact-form {
+    /* Center the form with automatic side margins */
+    padding: 20px;
+    /* Increase padding for a more spacious look */
+    background-color: #000000;
+    /* White background for the form */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    width: 80%;
+    /* Set form width to 80% of the screen */
+    max-width: 1200px;
+    /* Limit the maximum width on larger screens */
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    /* Size of form heading */
+    color: #686666;
+    /* Text color */
+}
+
+.contact-form label {
+    display: block;
+    /* Block display for labels */
+    margin: 10px 0 5px;
+    /* Space around labels */
+    font-weight: bold;
+    /* Bold labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    /* Full width */
+    margin-right: 10px;
+    padding: 10px;
+    /* Inner padding */
+    margin-bottom: 20px;
+    /* Space below inputs */
+    border: 1px solid #807979;
+    /* Border for inputs */
+    border-radius: 4px;
+    /* Rounded corners */
+}
+
+.contact-form button {
+    background-color: #007bff;
+    /* Primary button color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    padding: 10px 15px;
+    /* Padding for button */
+    border-radius: 4px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor */
+    transition: background-color 0.3s;
+    /* Transition for hover effect */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    /* Darker color on hover */
+}
+
+
+.contact-info {
+    flex: 1;
+    /* Allow the info section to take available space */
+    margin: 20px;
+    /* Margin for spacing */
+    padding: 20px;
+    /* Padding for inner spacing */
+    margin-top: 300px;
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    right: auto;
+
+}
+
+.contact-item {
+    display: flex;
+    /* Flex layout for icon and text */
+    align-items: center;
+    /* Center align items */
+    width: 300px;
+
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    /* Size of icons */
+    margin-right: 10px;
+    /* Space between icon and text */
+    color: #007bff;
+    /* Icon color */
+}
+
+.contact-item a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #007bff;
+    /* Link color */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        /* Stack items on smaller screens */
+        align-items: center;
+        /* Center align items */
+    }
+}
