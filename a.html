@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience Dropdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .work-experience-section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .section-heading {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .work-container {
+            margin-top: 10px;
+        }
+        .experience {
+            margin-bottom: 10px;
+        }
+        .details {
+            display: block; /* Change to block for smooth transitions */
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden; /* Hide overflow */
+            transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out; /* Extended duration for smoothness */
+            max-height: 0; /* Start with a max height of 0 */
+            opacity: 0; /* Start with opacity 0 */
+        }
+        .details.open {
+            max-height: 200px; /* Set a maximum height for the open state */
+            opacity: 1; /* Full opacity when open */
+        }
+        .toggle-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: none;
+            width: 100%;
+            text-align: left;
+            border-radius: 4px;
+        }
+        .toggle-button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<section class="work-experience-section">
+    <h3 class="section-heading">Work Experience</h3>
+    <div class="work-container">
+
+        <div class="experience">
+            <button class="toggle-button">HieCOR Software Technologies - Feb/2022 – Nov/2022 +</button>
+            <div class="details">
+                <p>Details about Experience 1. This could include information about your role, responsibilities, and achievements.</p>
+            </div>
+        </div>
+        <div class="experience">
+            <button class="toggle-button">Experience 2 +</button>
+            <div class="details">
+                <p>Details about Experience 2. Here, you might outline key projects you worked on or skills you developed.</p>
+            </div>
+        </div>
+        <div class="experience">
+            <button class="toggle-button">Experience 3 +</button>
+            <div class="details">
+                <p>Details about Experience 3. This section can highlight what you learned and how you contributed to the team.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.toggle-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const details = button.nextElementSibling; // Get the details div
+            
+            // Close all other details
+            document.querySelectorAll('.details').forEach(otherDetails => {
+                if (otherDetails !== details) {
+                    otherDetails.classList.remove('open'); // Remove the open class
+                }
+            });
+
+            // Toggle the clicked details
+            details.classList.toggle('open'); // Toggle the open class
+            
+            // Update button text
+            const isOpen = details.classList.contains('open');
+            button.textContent = button.textContent.replace(isOpen ? '+' : '−', isOpen ? '−' : '+');
+        });
+    });
+</script>
+
+</body>
+</html>

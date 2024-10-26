@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
     <link rel="icon" href="fav.png" type="image/png">
 
     <title>Aman</title>
@@ -19,19 +20,17 @@
 <body>
 
     
-<div class="resume"> 
-    <a href="resume.pdf" class="resume-button">Resume</a>
-</div>
+
 
 <nav class="navbar">
-    
-
     <div class="container">
 
         <div class = "page">
-            <a href="#top" class="nav-link">About</a>
-            <a href="#top" class="nav-link">Projects</a>
-            <a href="#con" class="nav-link">Certificate</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skill" class="nav-link">Expertise</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#exp" class="nav-link">Experience</a>
+            <a href="#blog" class="nav-link">Blog</a>
             <a href="#con" class="nav-link">Contact</a>
             <a href="https://www.instagram.com" target="_blank" class="social-icon"> 
                 <i class="fab fa-instagram" ></i>
@@ -51,112 +50,222 @@
 </nav>
 
 
+<div class="resume"> 
+    <a href="resume.pdf" class="resume-button">Resume</a>
+</div>
 
 
 
+<div class="intro" id="about">
+    
+    
 
-
-
-<div class="intro" id="top">
-    <video autoplay muted loop id="background-video">
-        <source src="bacintro.MOV" type="video/mp4" />Your browser does not support the video tag.
-      </video>
 
 
     <div class="intro-container">
+        <video autoplay muted loop id="background-video">
+            <source src="bacintro.MOV" type="video/mp4" />Your browser does not support the video tag.
+          </video>
         <h1 class="big-heading">Hello I'm<br>Aman Dhakad</h1>
+
+        <div class="summary">
+            <p>A Full-Stack Engineer with a strong background in developing robust web applications. 
+                <br>I specialize in creating seamless integrations between frontend and backend systems, ensuring smooth user experiences while efficiently handling data and application logic. 
+                <br>My goal is to deliver scalable, high-quality solutions that meet both user needs and business objectives.</p>
+        </div>
+        
+        <a href="#con" class=explore-button>&#x25B2;</a>
     </div>
-    <div class="summary">
-        <p>WI have a robust academic background in technology and management, reflecting a commitment to both theoretical knowledge and practical application. I am currently pursuing a Master of Science in Information Technology and Management at the Illinois Institute of Technology, where I am enhancing my skills in advanced technology and management principles. My foundational education in Computer Science and Engineering was completed at Rajiv Gandhi Proudyogiki Vishwavidyalaya in India, where I built a solid base in core computing concepts.</p></p>
-    </div>
+
+
 </div> 
 
 
 
+<section class="skills" id="skill">
+    <h2>My Expertise</h2>
+    <div class="skill-container">
+        <div class="skill-tile">
+            <h3>Front-end</h3>
+            <p>Java, HTML, JavaScript, Node.js, Django, React.js, RESTful API, MySQL, PL/SQL, Oracle, Python, C++</p>
+        </div>
+        <div class="skill-tile">
+            <h3>Back-end</h3>
+            <p>MS Excel, Data Analysis, Statistical Analysis, ETL, Apache Hadoop, Airflow, Power BI, Azure</p>
+        </div>
+        <div class="skill-tile">
+            <h3>Virsion control</h3>
+            <p>Pandas, NumPy, scikit-learn, TensorFlow, PyTorch, Matplotlib, NLTK, OpenCV</p>
+        </div>
+        <div class="skill-tile">
+            <h3>DevOps/Cloud</h3>
+            <p>Jenkins, GitLab CI, Docker, Kubernetes, Git, Agile</p>
+        </div>
+        <div class="skill-tile">
+            <h3>Data Engineer</h3>
+            <p>System Architecture, Scalability, High Availability, Load Balancing, Database Design, Microservices, API Design, Shell, Performance Optimization, Design Patterns, Distributed Systems, Data Structures, Algorithms</p>
+        </div>
+    </div>
+</section>
 
 
-<section class="products">
+
+
+
+<section class="products" id="work">
     <h2>Projects</h2>
 
     <div class="tiles-container">
 
+
+
+
+
+    <div class="project">  
+
         <div class="tile">
-            <video autoplay muted loop id="background-video">
-                <source src="ecom.mp4" type="video/mp4" />Your browser does not support the video tag.
-              </video>
-            <div class="tile-content">
-                <h3>ecommerce website (Zallany.com)</h3>
-                <a href="https://github.com/amandhakad4u/E-commerce.git" class="buy-button">see code</a>
-            </div>
-        </div>
-        <div class="tile">
+
+
             <video autoplay muted loop id="background-video">
                 <source src="port.mp4" type="video/mp4" />Your browser does not support the video tag.
               </video>
-            <div class="tile-content">
-                <h3>Personal Portfolio Website</h3>
-                <p>      </p>
-                <a href="https://amandhakad4u.github.io/AMAN_PORTFOLIO/" class="buy-button">see Project</a>
+
+            <div class="see">
+                <a href="https://amandhakad4u.github.io/AMAN_PORTFOLIO/" class="buy-button">View Project &#8594;</a>
             </div>
+
         </div>
+        <h3>Portfolio Showcase Website</h3>
+        <p>A dynamic platform showcasing my projects and achievements as a Full-Stack Engineer, highlighting my expertise</p>
+    
+    </div> 
+    <div class="project">  
+
         <div class="tile">
+
+
             <video autoplay muted loop id="background-video">
                 <source src="ecom.mp4" type="video/mp4" />Your browser does not support the video tag.
               </video>
-            <div class="tile-content">
-                <h3>ecommerce website</h3>
-                <p>Brief description of Product 1.</p>
-                <a href="https://github.com/amandhakad4u/E-commerce.git" class="buy-button">see code</a>
+
+            <div class="see">
+                <a href="https://github.com/amandhakad4u/E-commerce" class="buy-button">View Code &#8594;</a>
             </div>
+
         </div>
+        <h3>Zallany.com</h3>
+        <p>An eCommerce website developed with Django, MySQL, HTML, CSS, and JavaScript, featuring responsive design, user authentication, and product and order management</p>
+    
+    </div> 
+    <div class="project">  
+
         <div class="tile">
+
+
             <video autoplay muted loop id="background-video">
-                <source src="ecom.mp4" type="video/mp4" />Your browser does not support the video tag.
+                <source src="port.mp4" type="video/mp4" />Your browser does not support the video tag.
               </video>
-            <div class="tile-content">
-                <h3>ecommerce website</h3>
-                <p>Brief description of Product 1.</p>
-                <a href="https://github.com/amandhakad4u/E-commerce.git" class="buy-button">see code</a>
+
+            <div class="see">
+                <a href="https://amandhakad4u.github.io/AMAN_PORTFOLIO/" class="buy-button">see Project &#8594;</a>
             </div>
+
         </div>
+        <h3>Portfolio Project</h3>
+        <p>This project showcases my portfolio with a collection of my works and achievements.</p>
+    
+    </div> 
+    <div class="project">  
+
         <div class="tile">
+
+
             <video autoplay muted loop id="background-video">
-                <source src="ecom.mp4" type="video/mp4" />Your browser does not support the video tag.
+                <source src="port.mp4" type="video/mp4" />Your browser does not support the video tag.
               </video>
-            <div class="tile-content">
-                <h3>ecommerce website</h3>
-                <p>Brief description of Product 1.</p>
-                <a href="https://github.com/amandhakad4u/E-commerce.git" class="buy-button">see code</a>
+
+            <div class="see">
+                <a href="https://amandhakad4u.github.io/AMAN_PORTFOLIO/" class="buy-button">see Project &#8594;</a>
             </div>
+
         </div>
+        <h3>Portfolio Project</h3>
+        <p>This project showcases my portfolio with a collection of my works and achievements.</p>
+    
+    </div> 
+    <div class="project">  
+
+        <div class="tile">
+
+
+            <video autoplay muted loop id="background-video">
+                <source src="port.mp4" type="video/mp4" />Your browser does not support the video tag.
+              </video>
+
+            <div class="see">
+                <a href="https://amandhakad4u.github.io/AMAN_PORTFOLIO/" class="buy-button">see Project &#8594;</a>
+            </div>
+
+        </div>
+        <h3>Portfolio Project</h3>
+        <p>This project showcases my portfolio with a collection of my works and achievements.</p>
+    
+    </div> 
+     
+
+
+
+
 
     </div>
 </section>
 
 
-    <section class="work-experience-section">
-        <h3 class="section-heading">Work Experience</h3>
-        <div class="work-container">
-            <div class="experience">
-                <button class="toggle-button">Experience 1</button>
-                <div class="details">
-                    <p>Details about Experience 1. This could include information about your role, responsibilities, and achievements.</p>
-                </div>
-            </div>
-            <div class="experience">
-                <button class="toggle-button">Experience 2</button>
-                <div class="details">
-                    <p>Details about Experience 2. Here, you might outline key projects you worked on or skills you developed.</p>
-                </div>
-            </div>
-            <div class="experience">
-                <button class="toggle-button">Experience 3</button>
-                <div class="details">
-                    <p>Details about Experience 3. This section can highlight what you learned and how you contributed to the team.</p>
-                </div>
+
+
+
+
+<section class="work-experience-section" id="exp">
+    <h3 class="section-heading">Work Experience</h3>
+    <div class="work-container">
+        <div class="experience">
+            <button class="toggle-button">&#8595        Illinois Tech      |      Jan/2023 - -Present</button>
+            <div class="details">
+                <h3>Grad Student</h3>
+                <p></p>
             </div>
         </div>
-    </section>
+        <div class="experience">
+            <button class="toggle-button">&#8595        HieCOR Software Technologies      |      Feb/2022 – Nov/2022</button>
+            <div class="details">
+                <h3>Software Engineer</h3>
+                <p>• Developed dynamic user interfaces with React, boosting user engagement by 30%, while building server-side applications using
+                    Node.js and Express, improving API response times by 25% and enhancing data processing efficiency.
+                    <br><br>• Created RESTful APIs in Django, facilitating secure data exchange between the front-end and back-end systems, improving
+                    application scalability and integration capabilities.
+                    <br><br>• Optimized SQL database queries, reducing data retrieval times by 25% and increasing overall database efficiency.
+                    <br><br>• Participated in Agile sprints and used JIRA for tracking, contributing to a 20% reduction in project delivery time. Managed code
+                    with Git, ensuring collaboration and maintaining quality within a team of 5 engineers.</p>
+            </div>
+        </div>
+        <div class="experience">
+            <button class="toggle-button">&#8595        Pepcoding      |      July/2021 – Dec/2021</button>
+            <div class="details">
+                <h3>Student intern</h3>
+                
+                <p> • Utilized advanced indexing, query optimization, and normalization techniques in SQL, reducing database access latency by 25%
+                and enhancing system scalability for handling large datasets.
+                <br><br>• Designed and implemented automated ETL workflows using Python, Apache Airflow, and SQL, reducing manual data handling
+                by 30% and improving data processing times by 20%.
+                <br><br>• Integrated processed data into interactive dashboards with Power BI, providing real-time insights that supported business
+                decision-making and reduced reporting times by 25%. </p>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
 
 
 
@@ -171,41 +280,17 @@
           </a> 
           <h3>Google Data Analyst Certificate</h3>
       </div>
-      <!-- Add more certification items here as needed -->
+
   </div>
 </section>
 
 
-<section class="skills">
-    <h2>Skills</h2>
-    <div class="tiles-container">
-        <div class="tile">
-            <h3>Web Development</h3>
-            <p>Java, HTML, JavaScript, Node.js, Django, React.js, RESTful API, MySQL, PL/SQL, Oracle, Python, C++</p>
-        </div>
-        <div class="tile">
-            <h3>Data Engineering</h3>
-            <p>MS Excel, Data Analysis, Statistical Analysis, ETL, Apache Hadoop, Airflow, Power BI, Azure</p>
-        </div>
-        <div class="tile">
-            <h3>Machine Learning</h3>
-            <p>Pandas, NumPy, scikit-learn, TensorFlow, PyTorch, Matplotlib, NLTK, OpenCV</p>
-        </div>
-        <div class="tile">
-            <h3>DevOps</h3>
-            <p>Jenkins, GitLab CI, Docker, Kubernetes, Git, Agile</p>
-        </div>
-        <div class="tile">
-            <h3>System Design</h3>
-            <p>System Architecture, Scalability, High Availability, Load Balancing, Database Design, Microservices, API Design, Shell, Performance Optimization, Design Patterns, Distributed Systems, Data Structures, Algorithms</p>
-        </div>
-    </div>
-</section>
+
 
 
 <section class="news-slider">
-    <h2>News Updates</h2>
-    <div class="slider-container">
+    <h2>My blogs.</h2>
+
 
         <div class="slider">
             <div class="news-tile">
@@ -257,11 +342,11 @@
         </div>
 
 
-    </div>
-    <div class="navigation">
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-    </div>
+
+
+
+
+
 </section>
 
 
