@@ -7,60 +7,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #000000;
+    /* overflow-x: hidden; */
 
 
 }
-/* ------------------------------------------------------------------------------------------------------------------------ */
 
-.resume {
-    width: 100px;                              /* Set the width to 660px */
-    height: 20px;                              /* Set the height */
-    padding: 15px;                             /* Padding inside the navbar */
-    border-color: white;                       /* Border color */
-    background-color: rgba(255, 255, 255, 0.411);     /* Semi-transparent black background */
-    backdrop-filter: blur(15px);               /* Apply blur effect */
-    z-index: 10;                               /* Ensure it appears above other elements */
-    border-radius: 20px;                       /* Round corners */
-    position: fixed;                           /* Keep the navbar fixed */
-    top: 10px;                                 /* Distance from the top of the page */
-    right: 50px; 
-    opacity: 0;                                   /* Center the navbar horizontally */
-    transform: translateX(-50%);              /* Adjust for centering */
-    animation: fadeIntitle 1s ease forwards;       /* Apply fadeIn animation */
-    animation-delay: 1s;
-}
-
-@keyframes fadeIntitle {
-    0% {
-        opacity: 0;               /* Start with an opacity of 0 */
-        transform: translateX(-20px); /* Move the navbar up slightly */
-    }
-    100% {
-        opacity: 1;               /* End with full opacity */
-        transform: translateX(0); /* Move back to its original position */
-    }
-}
-.resume-button {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 10px;
-    transition: color 0.3s ease, transform 0.3s ease; 
-}
-.resume-button:hover{
-    color: #ffffff; 
-    transform: scale(1.1);
-
-}
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 .navbar {
-    width: 660px;                              /* Set the width to 660px */
+    width: 750px;                              /* Set the width to 660px */
     height: 20px;                              /* Set the height */
     padding: 15px;                             /* Padding inside the navbar */
-    border-color: white;                       /* Border color */
-    background-color: rgba(255, 255, 255, 0.411);     /* Semi-transparent black background */
+    border-color: rgb(0, 0, 0);                       /* Border color */
+    background-color: rgba(0, 0, 0, 0.109);     /* Semi-transparent black background */
     backdrop-filter: blur(15px);               /* Apply blur effect */
     z-index: 10;                               /* Ensure it appears above other elements */
     border-radius: 20px;                       /* Round corners */
@@ -69,9 +28,19 @@ body {
     right: 30%; 
     opacity: 0;                                   /* Center the navbar horizontally */
     transform: translateX(-50%);              /* Adjust for centering */
-    animation: fadeIn 1s ease forwards;       /* Apply fadeIn animation */
-    animation-delay: 1s;
+    animation: fadeIn 0.5s ease-in-out forwards;       /* Apply fadeIn animation */
+    animation-delay: 0.2s;
+    transition: box-shadow 0.s ease-out;
+    
+
+
 }
+
+.navbar:hover{
+    box-shadow: inset 0 0 10px 1px #ffffff80;
+
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;               /* Start with an opacity of 0 */
@@ -80,6 +49,7 @@ body {
     100% {
         opacity: 1;               /* End with full opacity */
         transform: translateY(0); /* Move back to its original position */
+
     }
 }
 
@@ -102,7 +72,7 @@ body {
 }
 
 .nav-link {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -111,7 +81,7 @@ body {
 }
 
 .social-icon {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 22px;
     transition: color 0.3s ease, transform 0.3s ease; 
 }
@@ -120,10 +90,53 @@ body {
     color: #ffffff; 
     transform: scale(1.1);
 }
-
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
+.resume {
+    width: 75px;                              /* Set the width to 660px */
+    height: 20px;                              /* Set the height */
+    padding: 15px;  
+                     /* Border color */
+    background-color: rgb(255, 255, 255);     /* Semi-transparent black background */
+    backdrop-filter: blur(15px);               /* Apply blur effect */
+    z-index: 10;                               /* Ensure it appears above other elements */
+    border-radius: 13px;                       /* Round corners */
+    position: fixed;                           /* Keep the navbar fixed */
+    top: 10px;                                 /* Distance from the top of the page */
+    right: 50px; 
+    opacity: 0;                                   /* Center the navbar horizontally */
+    transform: translateX(-50%);              /* Adjust for centering */
+    animation: fadeIntitle 1s ease-in-out forwards;       /* Apply fadeIn animation */
+    animation-delay: 0.5s;
+}
 
+@keyframes fadeIntitle {
+    0% {
+        opacity: 0;               /* Start with an opacity of 0 */
+        transform: translateX(70px); /* Move the navbar up slightly */
+    }
+    100% {
+        opacity: 1;               /* End with full opacity */
+        transform: translateX(0); /* Move back to its original position */
+    }
+}
+
+.resume-button {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: background-color 1s ease-out; 
+}
+.resume:hover, .resume-button:hover {
+    color: white;
+    background-color: transparent ;
+
+
+
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
 
 
@@ -136,21 +149,37 @@ body {
 
 .intro {
     width: 100%;                            /* Full width of the section */
-    height: 100vh;                          /* Full viewport height */
+    height: 100vh;    
     background-size: cover;                  /* Cover the entire section */
     background-position: center;             /* Center the background image */
     opacity: 0;                              /* Start with opacity 0 */
     animation: fadeInIntro 1s ease-in-out forwards; /* Apply fadeInIntro animation */
-    animation-delay: 2s;                     /* Delay the animation by 2 seconds */
+    animation-delay: 2s;                     /* Delay the animation by 2 seconds */  
+    overflow: hidden;
 }
-.intro video {
+
+
+.intro-container {
+    position: relative;
+    z-index: 2; /* Bring content above the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.intro-container video {
     width: 100%;                            /* Full width of the section */
     height: 100vh;                          /* Full viewport height */
     background-size: cover;                  /* Cover the entire section */
     background-position: center;             /* Center the background image */
     opacity: 0;                              /* Start with opacity 0 */
-    animation: fadeInIntro 1s ease-in-out forwards; /* Apply fadeInIntro animation */
-    animation-delay: 2s;                     /* Delay the animation by 2 seconds */
+    animation: fadeInIntro 0.2s ease-in-out forwards; /* Apply fadeInIntro animation */
+    animation-delay: 0.1s;                     /* Delay the animation by 2 seconds */
 }
 
 @keyframes fadeInIntro {
@@ -162,64 +191,115 @@ body {
     }
 }
 
-.intro-container {
-    margin-top: 0%;
-    color: #ffffff;                          /* White text color for better visibility */
-    padding: 20px;                           /* Optional padding */
-
-}
-
 .big-heading {
-    font-size: 8em;                        /* Size of the heading */
-    color: #cccbcb;                        /* White text color */
-    width: 900px;
-    margin-top: 200px;
-    margin-left: 30px;
+    text-align: left;
+    font-size: 8em;
+    color: #cccbcb;
+    cursor:default;
     opacity: 0;
-    animation: fadeInSlideUp 1.5s ease-in-out forwards; /* Apply animation */
-    animation-delay: 3s;                 /* Delay before the animation starts */
-    transition: all 1s ease;
+
+    animation: fadeInSlideUp 1.5s ease-in-out forwards;
+    animation-delay: 3s;
+    background: linear-gradient(45deg, rgb(243, 255, 172), rgb(160, 255, 199), rgb(212, 255, 212), rgb(211, 211, 255)); /* Gradient background */
+    -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
+    background-clip: text; /* Use background as text color (for non-WebKit browsers) */
+    transition:  transform 0.5s ease  ;
 }
 
 .big-heading:hover {
-    text-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.3);
+    transform: scale(1.5);
 }
 
 @keyframes fadeInSlideUp {
     0% {
-        opacity: 0;                          /* Start invisible */
-        transform: translateY(60px);        /* Start 20px lower */
+        opacity: 0;
+        transform: translateY(90px);
     }
     100% {
-        opacity: 1;                          /* Fully visible */
-        transform: translateY(0px);            /* Move to original position */
-        
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-
 
 .summary p {
-    color: #cccbcb;                        /* White text color */
+    font-size: 20px;
+    color: #cccbcb;
     width: 900px;
+    max-width: 90%;
     opacity: 0;
-    margin-left: 50px;
-    animation: fadeInSlideUp 1.5s ease forwards; /* Apply animation */
-    animation-delay: 3.5s;                 /* Delay before the animation starts */
-}
-@keyframes fadeInSlideUp {
-    0% {
-        opacity: 0;                          /* Start invisible */
-        transform: translateY(60px);        /* Start 20px lower */
-    }
-    100% {
-        opacity: 1;                          /* Fully visible */
-        transform: translateY(0px);            /* Move to original position */
-        
-    }
+    animation: fadeInSlideUp 1.5s ease forwards;
+    animation-delay: 3.5s;
 }
 
+.explore-button {
+
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease; 
+    animation: bounce 2s infinite;
+    margin-top: 50px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-20);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(35px);
+        opacity: 1;
+    }
+}
+
+.explore-button:hover {
+   color: #ffffff;
+}
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+.skills {
+    text-align: center;
+    padding: 20px;
+    margin-top: 200px;
+    background-color: transparent;
+    display: grid;
+    padding: 40px;
+}
+
+.skills h2 {
+    font-size: 70px;
+    margin-top: 5px;
+    background: linear-gradient(45deg, rgb(249, 255, 214), rgb(255, 255, 218), rgb(212, 255, 212), rgb(205, 205, 255)); /* Gradient background */
+    -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
+    background-clip: text; /* Use background as text color (for non-WebKit browsers) */
+}
 
 
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 50px;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+
+.skill-tile {
+    background-color: #1f1e1e;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 2px px rgba(0, 0, 0, 0.1);
+}
+.skill-tile h3{
+    font-size: 22px;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
@@ -228,15 +308,18 @@ body {
 
 .products {
     text-align: center;
-    padding: 20px;
-    margin-top: 25px;
+    padding: 40px;
+    margin-top: 300px;
     background-color: #000000f6;
 }
 
 .products h2 {
-    color: #ffffff;
-    font-size: 45px;
+    font-size: 90px;
     margin-top: 5px;
+    background: linear-gradient(45deg, rgb(249, 255, 214), rgb(255, 255, 218), rgb(212, 255, 212), rgb(205, 205, 255)); /* Gradient background */
+    -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
+    background-clip: text; /* Use background as text color (for non-WebKit browsers) */
 }
 
 .tiles-container {
@@ -244,6 +327,19 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 50px;
     justify-content: center;
+    
+    
+}
+
+.project{
+    display: grid;
+    color: rgb(210, 255, 210);
+    text-align: left;
+    margin-top: 50px;
+    
+}
+.project h3 {
+    font-size: 20px;
 }
 
 .tile {
@@ -252,11 +348,35 @@ body {
     height: 300px;
     overflow: hidden;
     /* border-radius: 8px; */
-    transition: transform 0.3s ease;
-    border: 0.5px solid #ccc ;
+    border: 3px solid #ccc ;
+    border-image: linear-gradient(45deg, rgb(211, 255, 177), yellow, green, blue) 1;
+    animation: borderAnimation 5s infinite; /* Apply animation */
+    transition: box-shadow 0.7s ease-in-out, transform 0.3s ease;
 
 
 
+}
+
+.tile:hover{
+    box-shadow:  0 0 90px 1px #11ff004d;
+    transform: scale(1.01);
+}
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(45deg, rgb(95, 255, 215), yellow);
+    }
+    25% {
+        border-image-source: linear-gradient(45deg, rgb(78, 179, 130), green);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, green, blue);
+    }
+    75% {
+        border-image-source: linear-gradient(45deg, blue, rgb(144, 229, 102));
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, rgb(0, 232, 197), yellow);
+    }
 }
 
 #background-video {
@@ -270,7 +390,7 @@ body {
     /* This will ensure the video covers the entire container */
 }
 
-.tile-content {
+.see {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -284,8 +404,9 @@ body {
 
 }
 
-.tile-content h3,.tile-content a  {
-    margin-top: 100px;
+.see a  {
+    margin-top: 140px;
+    margin-left: 180px;
 }
 
 .tile:hover #background-video {
@@ -293,9 +414,14 @@ body {
 }
 
 
-.tile:hover .tile-content {
+
+
+.tile:hover .see {
     opacity: 1;
 }
+
+
+
 
 .buy-button {
     display: inline-block;
@@ -306,11 +432,11 @@ body {
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
     border-radius: 19px;
     transition: background-color 0.3s, transform 0.2s;
+    white-space: pre ;
 }
 
 .buy-button:hover {
@@ -324,92 +450,111 @@ body {
 
 
 
-
 .work-experience-section {
     padding: 20px;
-    margin-top: 150px;
-    margin-left: 70px;
-    margin-right: 70px;
-    border-radius: 20px;
-    background-color: #ffffff;
+    margin-top: 300px;
+    background-color: transparent;
     display: flex;
-    
 
+    overflow: hidden; /* Ensure nothing overflows outside the box */
+
+
+}
+
+@keyframes fadeIntitle {
+    0% {
+        opacity: 0;               /* Start with an opacity of 0 */
+        transform: translateX(70px); /* Move the navbar up slightly */
+    }
+    100% {
+        opacity: 1;               /* End with full opacity */
+        transform: translateX(0); /* Move back to its original position */
+    }
 }
 
 .section-heading {
-    width: 700px;
-    color: #000000;
-    font-size: 45px;
-    height:min-content;
+
+    font-size: 70px;
+    margin-top: 10px;
+    background: linear-gradient(45deg, rgb(249, 255, 214), rgb(255, 255, 218), rgb(212, 255, 212), rgb(205, 205, 255)); /* Gradient background */
+    -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
+    background-clip: text; /* Use background as text color (for non-WebKit browsers) */
 }
 
-.work-container {
-
-    width: 100%; /* Full width for smaller screens */
-    background-color: rgb(255, 255, 255); /* Container background color */
-    padding: 20px; /* Padding around the content */
-    border-radius: 20px; /* Rounded corners */
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  */
-    height: min-content;
+.work-container{
+    background-color: transparent; 
+    padding: 20px; 
+    border-radius: 20px; 
+    margin-right: 40px; /* Adjust margin to your liking */
+    position: inherit;
+    margin-left: 120px ;
+    width: 1000px;
 }
+
+
+
 
 
 .experience {
-    margin-bottom: 2px;
+    margin: 7px;
+    border: 3px solid #ccc;
+    border-image: linear-gradient(45deg, red, rgb(255, 175, 244), rgb(198, 104, 104), rgb(248, 177, 255)) 1;
 }
 
 .toggle-button {
-    background-color: #ece9e9db;
-    color: rgb(0, 0, 0);
+    font-size: 25px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     width: 100%;
     text-align: left;
-    font-size: 16px;
-
-    transition: background-color 0.3s ease;
+    font-size: 24px;
+    transition: transform 0.5s ease;
+    white-space: pre;
 }
 
 .toggle-button:hover {
-    background-color: #f3f2f2;
+    transform: scale(0.9);
 }
 
 .details {
     max-height: 0; /* Prevents box from taking up space */
     opacity: 0; /* Hidden by default */
     overflow: hidden; /* Hide overflow */
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-out; /* Added ease-out for both properties */
-    background-color: #ffffff;
-
+    transition: max-height 1s ease-out, opacity 1s ease-out; /* Added ease-out for both properties */
+    background-color: transparent;
+    color: white;
 }
 
 .details.show {
-    max-height: 100px; /* Set a maximum height */
+    max-height: 400px; /* Increased max-height to accommodate more content */
     opacity: 1; /* Make it visible */
     padding: 10px; /* Padding when visible */
 }
-
-
-
 
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 
 .certifications {
+
     justify-content: center;
     text-align: center;
     padding: 20px;
-    margin-top: 90px;
+    margin-top: 400px;
     background-color:#1f1e1e;
 }
 
 .certifications h2 {
-
-    color: #ffffff;
-    font-size: 45px;
+    font-size: 60px;
+    margin-top: 10px;
+    background: linear-gradient(45deg, #ffd6f5, rgb(218, 226, 255), rgb(212, 255, 212), rgb(255, 205, 205)); /* Gradient background */
+    -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
+    background-clip: text; /* Use background as text color (for non-WebKit browsers) */
 
 }
 
@@ -427,8 +572,8 @@ body {
 }
 
 .certification-item h3 {
-    margin-top: ;
-    color: #e0e0e0;
+    /* margin-top: ; */
+    color: #ffffff;
 }
 
 .certification-item img {
@@ -440,61 +585,32 @@ body {
 
 
 
-
-
-.skills {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    background-color: transparent;
-}
-
-.skills h2 {
-    color: #007bff;
-}
-
-.skills .tiles-container {
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    /* Adjust size as needed */
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-
-.skills .tile {
-    background-color: #1f1e1e;
-    padding: 20px;
-    text-align: center;
-    border-radius: 30px;
-    box-shadow: 0 2px px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
 
 
 
 .news-slider {
-    background-color: #1f1e1e;
+    background-color: #000000;
     color: #fff;
+    margin-top: 50px;
+    padding: 10px;
 
     position: relative;
+    
 }
 
 .news-slider h2 {
-    font-size: 2rem;
-    color: #007bff;
+    text-align: right;
+    font-size: 60px;
     margin-top: 5px;
-    text-align: center;
+    margin-right: 400px;
+    background: linear-gradient(45deg, rgb(249, 255, 214), rgb(255, 255, 218), rgb(212, 255, 212), rgb(205, 205, 255)); /* Gradient background */
+    -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
+    background-clip: text; /* Use background as text color (for non-WebKit browsers) */
 }
 
-.slider-container {
-    position: relative;
-    overflow: hidden;
-}
 
 
 
@@ -502,6 +618,7 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
     margin: 5px;
+    overflow: scroll;
 }
 
 .news-tile {
@@ -509,7 +626,7 @@ body {
     /* Show 4 tiles at a time */
     box-sizing: border-box;
     padding: 10px;
-    background-color: #007bff;
+    background-color:#7c7c7c6c;
     margin: 5px;
 }
 
@@ -521,7 +638,7 @@ body {
 }
 
 .news-content {
-    background-color: #333;
+    background-color: #7c7c7c6e;
     border-radius: 8px;
     padding: 10px;
     color: #fff;
@@ -553,38 +670,6 @@ body {
 }
 
 
-.navigation {
-    height: 40px;
-    display: flex;
-    padding-top: 50x;
-    margin-top: 40px;
-}
-
-.prev,
-.next {
-    position: absolute;
-
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-50%);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
 
 
 
@@ -592,6 +677,11 @@ body {
 
 
 
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
 
 
@@ -606,18 +696,21 @@ body {
 
 
 .contact {
-    background-color: #1f1e1e;
+    background-color: transparent;
     color: #fff;
     padding: 40px 20px;
     position: relative;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .contact h1 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: #007bff;
-    text-align: center;
+    font-size: 60px;
+    margin-top: 5px;
+    background: linear-gradient(45deg, rgb(249, 255, 214), rgb(255, 255, 218), rgb(212, 255, 212), rgb(205, 205, 255)); /* Gradient background */
+    -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
+    background-clip: text; /* Use background as text color (for non-WebKit browsers) */
 }
 
 .contact-container {

@@ -1,52 +1,19 @@
 
-window.addEventListener('scroll', function() {
 
-    const title = document.querySelector('.title');
+window.addEventListener('scroll', () => {
+    const section = document.getElementById('work-container');
+    const sectionPosition = section.getBoundingClientRect().top;
+    const viewportHeight = window.innerHeight;
 
-    if (window.scrollY > 50) { 
-
-        title.classList.add('scrolled');
-    } else {
-
-        title.classList.remove('scrolled');
+    // Check if the section is in the viewport
+    if (sectionPosition < viewportHeight && sectionPosition > 0) {
+        section.classList.add('slide'); // Add class to trigger the animation
     }
 });
 
 
 
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider');
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    const tileWidth = document.querySelector('.news-tile').offsetWidth;
-    let index = 0;
-
-    function updateSlider() {
-        slider.style.transform = `translateX(-${index * tileWidth}px)`;
-    }
-
-    nextButton.addEventListener('click', () => {
-        if (index < slider.children.length - 4) {
-            index++;
-            updateSlider();
-        }
-    });
-
-    prevButton.addEventListener('click', () => {
-        if (index > 0) {
-            index--;
-            updateSlider();
-        }
-    });
-
-    // Optionally, adjust slider on window resize
-    window.addEventListener('resize', () => {
-        updateSlider();
-    });
-});
 
 
 
@@ -54,17 +21,25 @@ document.querySelectorAll('.toggle-button').forEach(button => {
     button.addEventListener('click', () => {
         const details = button.nextElementSibling;
 
-        // Toggle the 'show' class to expand/collapse details
-        details.classList.toggle('show');
-
         // Close other details when one is opened
         document.querySelectorAll('.details').forEach(otherDetails => {
             if (otherDetails !== details) {
                 otherDetails.classList.remove('show');
             }
         });
+
+        // Toggle the 'show' class to expand/collapse details
+        details.classList.toggle('show');
+
+
+        const isOpen = details.classList.contains('show');
+        button.textContent = button.textContent.replace(isOpen ? '&#8595' : '&#8594', isOpen ? '&#8594' : '&#8595');
     });
 });
+
+
+
+
 
 
 
@@ -83,6 +58,5 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
     window.location.href = mailtoLink; // Redirect to mailto link
 });
-
 
 
