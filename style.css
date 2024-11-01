@@ -8,6 +8,7 @@ body {
     margin: 0;
     background-color: #000000;
     /* overflow-x: hidden; */
+    justify-content: center;
 
 
 }
@@ -15,7 +16,8 @@ body {
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 .navbar {
-    width: 750px;                              /* Set the width to 660px */
+    justify-content: center;
+    width: 250px;                              /* Set the width to 660px */
     height: 20px;                              /* Set the height */
     padding: 15px;                             /* Padding inside the navbar */
     border-color: rgb(0, 0, 0);                       /* Border color */
@@ -25,7 +27,7 @@ body {
     border-radius: 20px;                       /* Round corners */
     position: fixed;                           /* Keep the navbar fixed */
     top: 10px;                                 /* Distance from the top of the page */
-    right: 30%; 
+    right: 45%; 
     opacity: 0;                                   /* Center the navbar horizontally */
     transform: translateX(-50%);              /* Adjust for centering */
     animation: fadeIn 0.5s ease-in-out forwards;       /* Apply fadeIn animation */
@@ -454,7 +456,8 @@ body {
     padding: 20px;
     margin-top: 300px;
     background-color: transparent;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
 
     overflow: hidden; /* Ensure nothing overflows outside the box */
 
@@ -476,6 +479,7 @@ body {
 
     font-size: 70px;
     margin-top: 10px;
+    
     background: linear-gradient(45deg, rgb(249, 255, 214), rgb(255, 255, 218), rgb(212, 255, 212), rgb(205, 205, 255)); /* Gradient background */
     -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
     -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
@@ -486,10 +490,10 @@ body {
     background-color: transparent; 
     padding: 20px; 
     border-radius: 20px; 
-    margin-right: 40px; /* Adjust margin to your liking */
+
     position: inherit;
-    margin-left: 120px ;
-    width: 1000px;
+    margin-right: 20px ;
+    width: 100%;
 }
 
 
@@ -503,6 +507,7 @@ body {
 }
 
 .toggle-button {
+    display: grid;
     font-size: 25px;
     background-color: transparent;
     color: rgb(255, 255, 255);
@@ -514,6 +519,7 @@ body {
     font-size: 24px;
     transition: transform 0.5s ease;
     white-space: pre;
+    margin: 5px;
 }
 
 .toggle-button:hover {
@@ -601,16 +607,16 @@ body {
 }
 
 .news-slider h2 {
+    position: relative; /* Allows for positioning with 'right' */
     text-align: right;
     font-size: 60px;
     margin-top: 5px;
-    margin-right: 400px;
+    right: 10%; /* Moves the element 10% from the right side */
     background: linear-gradient(45deg, rgb(249, 255, 214), rgb(255, 255, 218), rgb(212, 255, 212), rgb(205, 205, 255)); /* Gradient background */
     -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
     -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
     background-clip: text; /* Use background as text color (for non-WebKit browsers) */
 }
-
 
 
 
