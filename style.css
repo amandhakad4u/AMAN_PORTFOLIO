@@ -447,6 +447,28 @@ body {
 
 
 
+.git {
+    justify-content: center;
+    bottom: 0;
+    right: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.813);
+    color: #fff;
+    padding: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.git a  {
+    margin-top: 140px;
+    margin-left: 180px;
+}
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
