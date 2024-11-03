@@ -143,12 +143,6 @@ body {
 
 
 
-
-
-
-
-
-
 .intro {
     width: 100%;                            /* Full width of the section */
     height: 100vh;    
@@ -158,13 +152,14 @@ body {
     animation: fadeInIntro 1s ease-in-out forwards; /* Apply fadeInIntro animation */
     animation-delay: 2s;                     /* Delay the animation by 2 seconds */  
     overflow: hidden;
+    display: flex;                           /* Use flexbox to center content */
     justify-content: center;
+    align-items: center;                     /* Center items vertically */
 }
-
 
 .intro-container {
     position: relative;
-    z-index: 2; /* Bring content above the video */
+    z-index: 2;                             /* Bring content above the video */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,7 +168,6 @@ body {
     height: 100vh;
     color: #ffffff;
     padding: 20px;
-    justify-content: center;
 }
 
 .intro-container video {
@@ -183,7 +177,7 @@ body {
     background-position: center;             /* Center the background image */
     opacity: 0;                              /* Start with opacity 0 */
     animation: fadeInIntro 0.2s ease-in-out forwards; /* Apply fadeInIntro animation */
-    animation-delay: 0.1s;                     /* Delay the animation by 2 seconds */
+    animation-delay: 0.1s;                   /* Delay the animation */
 }
 
 @keyframes fadeInIntro {
@@ -199,16 +193,15 @@ body {
     text-align: left;
     font-size: 8em;
     color: #cccbcb;
-    cursor:default;
+    cursor: default;
     opacity: 0;
-
     animation: fadeInSlideUp 1.5s ease-in-out forwards;
     animation-delay: 3s;
     background: linear-gradient(45deg, rgb(243, 255, 172), rgb(160, 255, 199), rgb(212, 255, 212), rgb(211, 211, 255)); /* Gradient background */
     -webkit-background-clip: text; /* Use background as text color (for WebKit browsers) */
     -webkit-text-fill-color: transparent; /* Make text color transparent to show background */
     background-clip: text; /* Use background as text color (for non-WebKit browsers) */
-    transition:  transform 0.5s ease  ;
+    transition: transform 0.5s ease;
 }
 
 .big-heading:hover {
@@ -237,7 +230,6 @@ body {
 }
 
 .explore-button {
-
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 20px;
@@ -250,7 +242,7 @@ body {
 
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(-20);
+        transform: translateY(-20px);
         opacity: 0.1;
     }
     50% {
@@ -260,8 +252,39 @@ body {
 }
 
 .explore-button:hover {
-   color: #ffffff;
+    color: #ffffff;
 }
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .intro {
+        height: 100vh; /* Maintain full height */
+        padding: 0;    /* Remove padding for smaller screens */
+    }
+    
+    .big-heading {
+        font-size: 5em; /* Adjust font size for smaller screens */
+    }
+
+    .summary p {
+        font-size: 16px; /* Slightly smaller font for paragraphs */
+    }
+
+    .explore-button {
+        font-size: 18px; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .big-heading {
+        font-size: 4em; /* Further adjust font size for very small screens */
+    }
+
+    .summary p {
+        font-size: 14px; /* Further reduce paragraph font size */
+    }
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 .skills {
@@ -458,8 +481,7 @@ body {
     color: #fff;
     padding: 10px;
     opacity: 1;
-    transform: scale(1.2);
-    
+    transition: opacity 0.3s ease;
 }
 
 .git a  {
@@ -468,7 +490,7 @@ body {
 }
 
 .git:hover{
-    
+    transform: scale(1.2);
     transition: transforn 1s ease;
 }
 
