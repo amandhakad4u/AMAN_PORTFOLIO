@@ -6,7 +6,7 @@ html {
 
     
 }
-@media only screen and (max-width:580px){
+@media only screen and (max-width:780px){
     html{
         /* width: 780px; */
         /* display: flex;   */
@@ -51,7 +51,7 @@ body {
 
 }
 
-@media (max-width: 580px) {
+@media (max-width: 768px) {
     .navbar {
         left: 3% ;                            /* Maintain no margin */
     }
@@ -160,7 +160,7 @@ body {
 
 }
 
-@media only screen and (max-width: 580px)  {
+@media only screen and (max-width: 780px)  {
     .resume {
         right: 3% ;                            /* Maintain no margin */
         height: 17px;
@@ -286,7 +286,7 @@ body {
 }
 
 /* Media queries for smaller screens */
-@media only screen and (max-width: 580px)  {
+@media only screen and (max-width: 780px)  {
     .intro {
         height: 100vh;          /* Maintain full height */
         padding: 0;             /* Remove padding for smaller screens */
@@ -310,7 +310,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 580px)  {
+@media only screen and (max-width: 780px)  {
     .big-heading {
         font-size: 4em; /* Further adjust font size for very small screens */
     }
@@ -366,7 +366,7 @@ body {
 
 
 
-@media only screen and (max-width: 580px)  {
+@media only screen and (max-width: 780px)  {
    .skills{
     width: 100vh;
    }
@@ -538,7 +538,7 @@ body {
 }
 
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 780px) {
     .products{
      width: 100vh;
     }
@@ -553,7 +553,7 @@ body {
     margin-top: 300px;
     background-color: transparent;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
 
     overflow: hidden; /* Ensure nothing overflows outside the box */
 
@@ -638,7 +638,7 @@ body {
     padding: 10px; /* Padding when visible */
 }
 
-@media only screen and (max-width: 580px)  {
+@media only screen and (max-width: 780px)  {
     .work-experience-section{
      width: 100vh;
     }
@@ -692,7 +692,7 @@ body {
 
 
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 780px) {
     .certifications{
      width: 100vh;
     }
@@ -791,7 +791,7 @@ body {
 
 
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 780px) {
     .news-slider{
         flex-direction: column;
         /* Stack items on smaller screens */
@@ -973,7 +973,7 @@ body {
 
 
 /* Responsive Styles */
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 780px) {
     .contact-container {
         flex-direction: column;
         /* Stack items on smaller screens */
@@ -986,7 +986,7 @@ body {
         margin: 0px;
         /* Center the container */
         background-color: #1f1e1e;
-        width: 100vh;
+        width: 100%;
     
     }
 }
