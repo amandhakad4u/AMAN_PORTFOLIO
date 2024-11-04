@@ -308,7 +308,7 @@ body {
 
 .skill-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 50px;
     justify-content: center;
     width: 100%;
@@ -351,7 +351,7 @@ body {
 
 .tiles-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 50px;
     justify-content: center;
     
