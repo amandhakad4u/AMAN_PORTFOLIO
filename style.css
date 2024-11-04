@@ -168,6 +168,7 @@ body {
     height: 100vh;
     color: #ffffff;
     padding: 20px;
+        width: 100%;
 }
 
 .intro-container video {
@@ -473,28 +474,24 @@ body {
 
 
 .git {
-    justify-content: center;
-    bottom: 0;
-    right: 50%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.813);
+    display: inline-block;
+    background-color: #007bff;
     color: #fff;
-    padding: 10px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    border: none;
+    bottom: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 19px;
+    transition: background-color 0.3s, transform 0.2s;
+    white-space: pre ;
 }
 
-.git a  {
-    margin-top: 140px;
-    margin-left: 180px;
+.git:hover {
+    background-color: #2d8aec;
 }
-
-.git:hover{
-    transform: scale(1.2);
-    transition: transforn 1s ease;
-}
-
-
 
 
 
