@@ -978,12 +978,5 @@ body {
         /* Center align items */
         width: 100vh;
     }
-    .contact-container {
-        display: flex;
-        margin: 0px;
-        /* Center the container */
-        background-color: #1f1e1e;
-        width: 100vh;
-    
-    }
+
 }
