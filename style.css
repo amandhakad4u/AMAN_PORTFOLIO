@@ -281,7 +281,7 @@ body {
 }
 
 /* Media queries for smaller screens */
-@media only screen and (max-height: 480px)  {
+@media only screen and (max-width: device-width)  {
     .intro {
         height: 100vh;          /* Maintain full height */
         padding: 0;             /* Remove padding for smaller screens */
@@ -305,7 +305,7 @@ body {
     }
 }
 
-@media only screen and (max-height: 480px) {
+@media only screen and (max-width: device-width){
     .big-heading {
         font-size: 4em; /* Further adjust font size for very small screens */
     }
@@ -362,7 +362,7 @@ body {
 
 
 
-@media only screen and (max-height: 480px) {
+@media only screen and (max-width: device-width) {
    .skills{
     width: 100vw;
    }
@@ -535,7 +535,7 @@ body {
 }
 
 
-@media only screen and (max-height: 480px)  {
+@media only screen and (max-width: device-width) {
     .products{
      width: 100vw;
     }
@@ -635,7 +635,7 @@ body {
     padding: 10px; /* Padding when visible */
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: device-width){
     .work-experience-section{
      width: 100vw;
     }
@@ -689,7 +689,7 @@ body {
 
 
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: device-width){
     .certifications{
      width: 100vw;
     }
@@ -788,7 +788,7 @@ body {
 
 
 
-@media only screen and (max-height: 480px)  {
+@media only screen and (max-width: device-width) {
     .news-slider{
         flex-direction: column;
         /* Stack items on smaller screens */
@@ -970,7 +970,7 @@ body {
 
 
 /* Responsive Styles */
-@media only screen and (max-height: 480px)  {
+@media only screen and (max-width: device-width) {
     .contact-container {
         /* flex-direction: column; */
         /* Stack items on smaller screens */
