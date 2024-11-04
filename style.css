@@ -44,7 +44,7 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 430px) {
     .navbar {
         left: 3% ;                            /* Maintain no margin */
     }
@@ -153,7 +153,7 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 430px) {
     .resume {
         right: 3% ;                            /* Maintain no margin */
         height: 17px;
@@ -279,7 +279,7 @@ body {
 }
 
 /* Media queries for smaller screens */
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .intro {
         height: 100vh;          /* Maintain full height */
         padding: 0;             /* Remove padding for smaller screens */
@@ -303,7 +303,7 @@ body {
     }
 }
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .big-heading {
         font-size: 4em; /* Further adjust font size for very small screens */
     }
@@ -359,7 +359,7 @@ body {
 
 
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
    .skills{
     width: 100vh;
    }
@@ -531,7 +531,7 @@ body {
 }
 
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .products{
      width: 100vh;
     }
@@ -631,7 +631,7 @@ body {
     padding: 10px; /* Padding when visible */
 }
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .work-experience-section{
      width: 100vh;
     }
@@ -685,7 +685,7 @@ body {
 
 
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .certifications{
      width: 100vh;
     }
@@ -783,7 +783,7 @@ body {
 
 
 
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .news-slider{
      width: 100vh;
     }
@@ -949,7 +949,7 @@ body {
 
 
 /* Responsive Styles */
-@media (max-width: 400px) {
+@media only screen and (max-width: 430px) {
     .contact-container {
         flex-direction: column;
         /* Stack items on smaller screens */
