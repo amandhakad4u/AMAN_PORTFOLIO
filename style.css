@@ -4,13 +4,11 @@ html {
     padding: 0;
 
 
+
+
     
 }
-@media only screen and (max-width:780px){
-    html{
-      width : 100vh;
-    }
-}
+
 
 body {
     cursor: url("/static/cursor.png"), auto;
@@ -48,7 +46,7 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-height: 480px) {
     .navbar {
         left: 3% ;                            /* Maintain no margin */
     }
@@ -156,8 +154,7 @@ body {
 
 
 }
-
-@media only screen and (max-width: 780px)  {
+@media only screen and (max-height: 480px)  {
     .resume {
         right: 3% ;                            /* Maintain no margin */
         height: 17px;
@@ -180,6 +177,7 @@ body {
     display: flex;                           /* Use flexbox to center content */
     justify-content: center;
     align-items: center;                     /* Center items vertically */
+    width: 100vw;
 }
 
 
@@ -283,11 +281,11 @@ body {
 }
 
 /* Media queries for smaller screens */
-@media only screen and (max-width: 780px)  {
+@media only screen and (max-height: 480px)  {
     .intro {
         height: 100vh;          /* Maintain full height */
         padding: 0;             /* Remove padding for smaller screens */
-        width: 100vh;      
+        width: 100vw;      
         margin: 0 auto;         /* Center the element horizontally */
         display: flex;          /* Ensure flexbox is active */
         justify-content: center;/* Center horizontally */
@@ -307,7 +305,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 780px)  {
+@media only screen and (max-height: 480px) {
     .big-heading {
         font-size: 4em; /* Further adjust font size for very small screens */
     }
@@ -327,6 +325,7 @@ body {
     display: grid;
     padding: 40px;
 
+
 }
 
 .skills h2 {
@@ -341,7 +340,7 @@ body {
 
 .skill-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     gap: 50px;
     justify-content: center;
     width: 100%;
@@ -363,9 +362,9 @@ body {
 
 
 
-@media only screen and (max-width: 780px)  {
+@media only screen and (max-height: 480px) {
    .skills{
-    width: 100vh;
+    width: 100vw;
    }
 }
 /* ------------------------------------------------------------------------------------------------------------------------ */
@@ -378,6 +377,7 @@ body {
     padding: 40px;
     margin-top: 300px;
     background-color: #000000f6;
+
 
 }
 
@@ -535,9 +535,9 @@ body {
 }
 
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-height: 480px)  {
     .products{
-     width: 100vh;
+     width: 100vw;
     }
  }
 
@@ -635,9 +635,9 @@ body {
     padding: 10px; /* Padding when visible */
 }
 
-@media only screen and (max-width: 780px)  {
+@media only screen and (max-width: 780px) {
     .work-experience-section{
-     width: 100vh;
+     width: 100vw;
     }
  }
 
@@ -689,9 +689,9 @@ body {
 
 
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 480px){
     .certifications{
-     width: 100vh;
+     width: 100vw;
     }
  }
 
@@ -788,13 +788,13 @@ body {
 
 
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-height: 480px)  {
     .news-slider{
         flex-direction: column;
         /* Stack items on smaller screens */
         align-items: center;
         /* Center align items */
-        width: 100vh;
+        width: 100vw;
      
     
     }
@@ -970,13 +970,14 @@ body {
 
 
 /* Responsive Styles */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-height: 480px)  {
     .contact-container {
-        flex-direction: column;
+        /* flex-direction: column; */
         /* Stack items on smaller screens */
         align-items: center;
         /* Center align items */
-        width: 100vh;
+        width: 100vw;
+        display: grid;
     }
 
 }
