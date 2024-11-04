@@ -8,10 +8,7 @@ html {
 }
 @media only screen and (max-width:780px){
     html{
-        /* width: 780px; */
-        /* display: flex;   */
- 
-        height: 100%;   
+      width : 100vh;
     }
 }
 
@@ -986,7 +983,7 @@ body {
         margin: 0px;
         /* Center the container */
         background-color: #1f1e1e;
-        width: 100%;
+        width: 100vh;
     
     }
 }
