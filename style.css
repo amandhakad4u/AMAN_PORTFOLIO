@@ -1,6 +1,12 @@
 html {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    /* width: 100vh; */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    
 }
+
 
 body {
     cursor: url("/static/cursor.png"), auto;
@@ -37,6 +43,13 @@ body {
 
 
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        left: 3% ;                            /* Maintain no margin */
+    }
+}
+
 
 .navbar:hover{
     box-shadow: inset 0 0 10px 1px #ffffff80;
@@ -95,11 +108,11 @@ body {
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 .resume {
-    width: 75px;                              /* Set the width to 660px */
+    width: 70px;                              /* Set the width to 660px */
     height: 20px;                              /* Set the height */
     padding: 15px;  
                      /* Border color */
-    background-color: rgb(255, 255, 255);     /* Semi-transparent black background */
+    background-color: transparent;     /* Semi-transparent black background */
     backdrop-filter: blur(15px);               /* Apply blur effect */
     z-index: 10;                               /* Ensure it appears above other elements */
     border-radius: 13px;                       /* Round corners */
@@ -110,6 +123,7 @@ body {
     transform: translateX(-50%);              /* Adjust for centering */
     animation: fadeIntitle 1s ease-in-out forwards;       /* Apply fadeIn animation */
     animation-delay: 0.5s;
+    box-shadow: inset 0 0 10px 1px #ffffff80;
 }
 
 @keyframes fadeIntitle {
@@ -124,7 +138,7 @@ body {
 }
 
 .resume-button {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -138,13 +152,20 @@ body {
 
 
 }
+
+@media (max-width: 768px) {
+    .resume {
+        right: 3% ;                            /* Maintain no margin */
+        height: 17px;
+    }
+}
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 
 
 
 .intro {
-    width: 100%;                            /* Full width of the section */
+
     height: 100vh;    
     background-size: cover;                  /* Cover the entire section */
     background-position: center;             /* Center the background image */
@@ -157,6 +178,7 @@ body {
     align-items: center;                     /* Center items vertically */
 }
 
+
 .intro-container {
     position: relative;
     z-index: 2;                             /* Bring content above the video */
@@ -166,13 +188,13 @@ body {
     align-items: center;
     text-align: center;
     height: 100vh;
+    width: 100%;
     color: #ffffff;
     padding: 20px;
-        width: 100%;
 }
 
 .intro-container video {
-    width: 100%;                            /* Full width of the section */
+    width: 100vh;                            /* Full width of the section */
     height: 100vh;                          /* Full viewport height */
     background-size: cover;                  /* Cover the entire section */
     background-position: center;             /* Center the background image */
@@ -257,10 +279,15 @@ body {
 }
 
 /* Media queries for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .intro {
-        height: 100vh; /* Maintain full height */
-        padding: 0;    /* Remove padding for smaller screens */
+        height: 100vh;          /* Maintain full height */
+        padding: 0;             /* Remove padding for smaller screens */
+        width: 100vh;      
+        margin: 0 auto;         /* Center the element horizontally */
+        display: flex;          /* Ensure flexbox is active */
+        justify-content: center;/* Center horizontally */
+        align-items: center;    /* Center vertically */
     }
     
     .big-heading {
@@ -276,7 +303,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .big-heading {
         font-size: 4em; /* Further adjust font size for very small screens */
     }
@@ -295,6 +322,7 @@ body {
     background-color: transparent;
     display: grid;
     padding: 40px;
+
 }
 
 .skills h2 {
@@ -329,6 +357,13 @@ body {
     font-size: 22px;
 }
 
+
+
+@media (max-width: 400px) {
+   .skills{
+    width: 100vh;
+   }
+}
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 
@@ -339,6 +374,7 @@ body {
     padding: 40px;
     margin-top: 300px;
     background-color: #000000f6;
+
 }
 
 .products h2 {
@@ -487,6 +523,7 @@ body {
     border-radius: 19px;
     transition: background-color 0.3s, transform 0.2s;
     white-space: pre ;
+    margin-top: 50px;
 }
 
 .git:hover {
@@ -494,6 +531,11 @@ body {
 }
 
 
+@media (max-width: 400px) {
+    .products{
+     width: 100vh;
+    }
+ }
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
@@ -504,9 +546,10 @@ body {
     margin-top: 300px;
     background-color: transparent;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
 
     overflow: hidden; /* Ensure nothing overflows outside the box */
+
 
 
 }
@@ -588,17 +631,23 @@ body {
     padding: 10px; /* Padding when visible */
 }
 
+@media (max-width: 400px) {
+    .work-experience-section{
+     width: 100vh;
+    }
+ }
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
 
 .certifications {
-
     justify-content: center;
     text-align: center;
     padding: 20px;
     margin-top: 400px;
     background-color:#1f1e1e;
+
+    margin-right: 0px;
 }
 
 .certifications h2 {
@@ -636,6 +685,11 @@ body {
 
 
 
+@media (max-width: 400px) {
+    .certifications{
+     width: 100vh;
+    }
+ }
 
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
@@ -650,6 +704,8 @@ body {
     padding: 10px;
 
     position: relative;
+
+
     
 }
 
@@ -727,7 +783,11 @@ body {
 
 
 
-
+@media (max-width: 400px) {
+    .news-slider{
+     width: 100vh;
+    }
+ }
 
 
 
@@ -755,6 +815,7 @@ body {
     position: relative;
     margin-top: 20px;
     justify-content: center;
+
 }
 
 .contact h1 {
@@ -888,7 +949,7 @@ body {
 
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .contact-container {
         flex-direction: column;
         /* Stack items on smaller screens */
