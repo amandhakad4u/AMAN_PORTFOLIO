@@ -955,5 +955,6 @@ body {
         /* Stack items on smaller screens */
         align-items: center;
         /* Center align items */
+        width: 100vh;
     }
 }
